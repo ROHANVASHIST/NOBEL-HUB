@@ -1,0 +1,212 @@
+/* =============================================
+   Analytics Dashboard Styles
+   ============================================= */
+
+.analytics-page {
+    padding-top: 100px;
+    padding-bottom: var(--space-3xl);
+    min-height: 100vh;
+}
+
+.analytics-header {
+    padding: var(--space-2xl) 0 var(--space-xl);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.analytics-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* Stats Cards */
+.analytics-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+}
+
+.stat-card {
+    display: flex !important;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) !important;
+    text-align: left !important;
+}
+
+.stat-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card__val {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+}
+
+.stat-card__label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+/* Charts Grid */
+.analytics-charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.chart-container {
+    padding: var(--space-xl);
+}
+
+.chart-container__header {
+    margin-bottom: var(--space-xl);
+}
+
+.chart-container__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.chart-container__subtitle {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Legend */
+.chart-legend {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.legend-name {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.legend-val {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-left: auto;
+}
+
+/* Institutional Ranking */
+.inst-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.inst-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.inst-name {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.inst-bar-bg {
+    height: 6px;
+    background: var(--color-surface-alt);
+    border-radius: var(--radius-full);
+    flex: 1.5;
+    overflow: hidden;
+}
+
+.inst-bar-fill {
+    height: 100%;
+    background: var(--color-gold);
+    border-radius: var(--radius-full);
+}
+
+.inst-val {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    width: 30px;
+    text-align: right;
+}
+
+/* Info box */
+.analytics-info {
+    margin-top: var(--space-3xl);
+    padding: var(--space-xl);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+    .analytics-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-charts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .analytics-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .analytics-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
